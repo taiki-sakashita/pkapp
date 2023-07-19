@@ -3,6 +3,7 @@ import './App.css';
 import { getAllPokemon, getPokemon } from './utils/pokemon';
 import { Card } from './components/Card/Card.js'
 import Navbar from './components/Navbar/Navbar';
+import { Search } from './utils/search';
 export default App;
 
 function App() {
@@ -62,6 +63,7 @@ const handlePrevPage = async ()=> {
   return (
   <>
     <Navbar />
+    <div>{Search}</div>
     <div className="App">
     {loding ? (
         <h1>ロード中・・・</h1>
