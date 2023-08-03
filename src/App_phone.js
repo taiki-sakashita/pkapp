@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './App.css';
+import './App_phone.css';
 import { getAllPokemon, getPokemon } from './utils/pokemon';
 import { Card } from './components/Card/Card.js'
 import Navbar from './components/Navbar/Navbar';
