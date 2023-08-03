@@ -61,6 +61,7 @@ const handlePrevPage = async ()=> {
 };
 
   return (
+
   <>
     <Navbar />
     <div>{Search}</div>
@@ -83,4 +84,9 @@ const handlePrevPage = async ()=> {
     </div>
   </>
   );
+}
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    console.log("スマホ")
+} else if (window.matchMedia('(min-width:768px)').matches) {
+    console.log("パソコン")
 }
