@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import "./Card.css"
-import { getPokemonAbility, getPokemonType,getPokemonName  } from '../../utils/pokemon';
+import { getPokemonAbility, getPokemonType} from '../../utils/pokemon';
 
 
 export const Card = ({ pokemon }) => {
@@ -55,9 +55,9 @@ export const Card = ({ pokemon }) => {
     loadPokemonType(resPokemonTypes);
     loadPokemonName(pokemonNameDetail);
     loadPokemonAbility(resPokemonAbility)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
 
-  console.log(pokemon);
 
   return (
     <div className="card">

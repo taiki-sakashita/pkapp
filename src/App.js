@@ -3,6 +3,7 @@ import './App.css';
 import { getAllPokemon, getPokemon } from './utils/pokemon';
 import { Card } from './components/Card/Card.js'
 import Navbar from './components/Navbar/Navbar';
+import { Search } from './utils/search';
 export default App;
 
 function App() {
@@ -60,8 +61,10 @@ const handlePrevPage = async ()=> {
 };
 
   return (
+
   <>
     <Navbar />
+    <div>{Search}</div>
     <div className="App">
     {loding ? (
         <h1>ロード中・・・</h1>
@@ -81,4 +84,9 @@ const handlePrevPage = async ()=> {
     </div>
   </>
   );
+}
+  if (window.matchMedia('(max-width: 767px)').matches) {
+    console.log("スマホ")
+} else if (window.matchMedia('(min-width:768px)').matches) {
+    console.log("パソコン")
 }
