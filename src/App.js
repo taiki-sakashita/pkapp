@@ -13,7 +13,12 @@ function App() {
   const [pokemonData, setPokemonData] = useState([])
   const [ nextURL, setNextURL ] = useState("");
   const [ prevURL, setPrevURL ] = useState("");
-
+  const returnTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+  };
 
 useEffect(() => {
   const fetchPokemonData = async () => {
@@ -76,8 +81,14 @@ const handlePrevPage = async ()=> {
             })}
           </div>
           <div className='btn'>
-            <button onClick={handlePrevPage}>前へ</button>
-            <button onClick={handleNextPage}>次へ</button>
+            <button onClick={() => {
+              handlePrevPage();
+              returnTop();
+            }}>前へ</button>
+            <button onClick={() => {
+              handleNextPage();
+              returnTop();
+            }}>次へ</button>
           </div>
         </>
       )}
